@@ -19,8 +19,8 @@ public class PersonalArea extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.personal_area);
         ImageView imageView = (ImageView) findViewById(R.id.imageView5);
         imageView.setOnClickListener(this);
-        TextView textView =(TextView) findViewById(R.id.textView5);
-        textView.setOnClickListener(this);
+        ImageView imageView1View =(ImageView) findViewById(R.id.imageView);
+        imageView1View.setOnClickListener(this);
     }
     public void onClickAdress(View view) {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:")));
@@ -31,7 +31,7 @@ public class PersonalArea extends AppCompatActivity implements View.OnClickListe
         if (v.getId() == R.id.imageView5) {
             Intent intent = new Intent(this, Login.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.textView5) {
+        } else if (v.getId() == R.id.imageView) {
             Intent intent1 = new Intent(this, Search.class);
             startActivity(intent1);
         }
